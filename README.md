@@ -1,5 +1,21 @@
 # RoutingApp
 
+## Extra Code Challenge Infos
+
+Use `json-server --watch users.json` to enable the "userDB" and to be able to login to the profile page. Currently there are two users with the following username and passwords:
+
+        {
+            "users": [{
+                "id": 1,
+                "username": "andy",
+                "password": "dings"
+            }, {
+                "id": 2,
+                "username": "foozi",
+                "password": "bums"
+            }]
+        }
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
 
 ## Development server

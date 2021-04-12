@@ -1,0 +1,97 @@
+<div class="profile">
+  <div class="left">
+    <div class="details">
+      <img src="/assets/img/user.png" />
+      <span>Rebecca Sanders</span>
+      <span class="badge bg-info">UX Designer</span>
+      <span>Rebecca.S@website.com</span>
+      <span class="last-login">Last logged in: Today at 2:18pm</span>
+    </div>
+    <ul class="links">
+      <li *ngFor="let link of links" [ngClass]="{ active: link.active }">
+        <i [class]="link.icon"></i> {{ link.label }}
+      </li>
+    </ul>
+  </div>
+  <div class="right">
+    <h2>Profile <span class="badge">RRO</span></h2>
+
+    <form>
+      <strong class="d-block h5 pb-2 border-bottom">Personal Info</strong>
+
+      <div class="row mb-3">
+        <label for="username" class="col-sm-2 col-form-label">
+          <img src="/assets/img/user.png" />
+        </label>
+        <div class="col-sm-10">
+          <div class="input-group mb-3">
+            <input
+              type="file"
+              class="form-control"
+              placeholder="Profilbild"
+              aria-label="Profilbild"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-update"
+            >
+              Update Image
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="username" class="col-sm-2 col-form-label">User Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="username" />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="username" class="col-sm-2 col-form-label">First Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="firstname" />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="username" class="col-sm-2 col-form-label">Last Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="lastname" />
+        </div>
+      </div>
+
+      <strong class="d-block h5 pb-2 border-bottom">Contact Info</strong>
+      <div class="row mb-3">
+        <label for="email" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="email" />
+          <div id="emailHelp" class="form-text">This is the email</div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="username" class="col-sm-2 col-form-label">Twitter</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="firstname" />
+          <div class="form-text">Your Twitter username</div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="username" class="col-sm-2 col-form-label">LinkedIn</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="lastname" />
+          <div class="form-text">e.g. https://www.linkedin.com/in/yourname</div>
+        </div>
+      </div>
+      <strong class="d-block h5 pb-2 border-bottom"></strong>
+      <div class="row mb-3">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-primary" id="submit">
+            Update Profile
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

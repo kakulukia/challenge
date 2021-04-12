@@ -1,0 +1,84 @@
+$grey: #F9F9FB
+$back: #E4B351
+
+.profile
+    display: grid
+    grid-template-columns: 250px auto
+
+.left, .right
+    height: 100vh
+
+.details, .right
+    padding: 2em
+
+.left
+
+    border-right: 2px solid $grey
+
+    .details
+        align-items: center
+        text-align: center
+        display: flex
+        flex-direction: column
+        padding-bottom: 3em
+
+        img
+            background: $back
+            height: 180px
+            width: 180px
+            border-radius: 50%
+
+        span
+            margin-top: 1em
+            &.badge
+                margin-top: 0.5em
+                color: white
+        .last-login
+            color: grey
+
+    ul.links
+        background: $grey
+        list-style: none
+        padding: 0
+        color: grey
+        li
+            background: white
+            margin-bottom: 2px
+            cursor: pointer
+            padding: 0.5em 2em
+            &:hover, &.active
+                background: $grey
+                color: #72B2B7
+                border-bottom: none
+                border-right: 4px solid #72B2B7
+            &:hover, &.active
+                &:first-of-type, &:last-of-type
+                    border-top: none
+                    border-bottom: none
+        li:first-of-type
+            border-top: 2px solid $grey
+        li:last-of-type
+            border-bottom: 2px solid $grey
+
+.right
+    .badge
+        background: $back
+        vertical-align: top
+        color: white
+        font-size: 1.3rem
+    strong
+        color: gray
+        margin-top: 2em
+        margin-bottom: 1em
+
+    img
+        width: 80%
+        background: $back
+        border-radius: 5px
+
+    label
+        text-align: right
+        font-weight: bold
+
+    #file-upload-button
+        background: red
