@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
     this.http.get<any>('http://localhost:3000/users?username=' + this.userService.username).subscribe(data => {
         let users = data;
         if (users.length === 1 && users[0].password === this.password){
+          this.userService.setUser(users[0])
           this.router.navigate(['/profile']);
         }
 

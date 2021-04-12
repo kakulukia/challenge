@@ -1,10 +1,12 @@
 <div class="profile">
   <div class="left">
     <div class="details">
-      <img src="/assets/img/user.png" />
-      <span>Rebecca Sanders</span>
+      <img src="{{ userService.user.profileImage }}" />
+      <span
+        >{{ userService.user.firstName }} {{ userService.user.lastName }}</span
+      >
       <span class="badge bg-info">UX Designer</span>
-      <span>Rebecca.S@website.com</span>
+      <span>{{ userService.user.email }}</span>
       <span class="last-login">Last logged in: Today at 2:18pm</span>
     </div>
     <ul class="links">
@@ -20,8 +22,8 @@
       <strong class="d-block h5 pb-2 border-bottom">Personal Info</strong>
 
       <div class="row mb-3">
-        <label for="username" class="col-sm-2 col-form-label">
-          <img src="/assets/img/user.png" />
+        <label for="profilePicture" class="col-sm-2 col-form-label">
+          <img src="{{ userService.user.profileImage }}" />
         </label>
         <div class="col-sm-10">
           <div class="input-group mb-3">
@@ -31,6 +33,7 @@
               placeholder="Profilbild"
               aria-label="Profilbild"
               aria-describedby="button-addon2"
+              id="profilePicture"
             />
             <button
               class="btn btn-outline-secondary"
@@ -45,19 +48,36 @@
       <div class="row mb-3">
         <label for="username" class="col-sm-2 col-form-label">User Name</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="username" />
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            [value]="userService.user.userName"
+          />
         </div>
       </div>
       <div class="row mb-3">
-        <label for="username" class="col-sm-2 col-form-label">First Name</label>
+        <label for="firstname" class="col-sm-2 col-form-label"
+          >First Name</label
+        >
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="firstname" />
+          <input
+            type="text"
+            class="form-control"
+            id="firstname"
+            [value]="userService.user.firstName"
+          />
         </div>
       </div>
       <div class="row mb-3">
-        <label for="username" class="col-sm-2 col-form-label">Last Name</label>
+        <label for="lastname" class="col-sm-2 col-form-label">Last Name</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="lastname" />
+          <input
+            type="text"
+            class="form-control"
+            id="lastname"
+            [value]="userService.user.lastName"
+          />
         </div>
       </div>
 
@@ -65,21 +85,36 @@
       <div class="row mb-3">
         <label for="email" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="email" />
-          <div id="emailHelp" class="form-text">This is the email</div>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            [value]="userService.user.email"
+          />
+          <div class="form-text">This is the email</div>
         </div>
       </div>
       <div class="row mb-3">
-        <label for="username" class="col-sm-2 col-form-label">Twitter</label>
+        <label for="twitter" class="col-sm-2 col-form-label">Twitter</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="firstname" />
+          <input
+            type="text"
+            class="form-control"
+            id="twitter"
+            [value]="userService.user.twitter"
+          />
           <div class="form-text">Your Twitter username</div>
         </div>
       </div>
       <div class="row mb-3">
-        <label for="username" class="col-sm-2 col-form-label">LinkedIn</label>
+        <label for="linkedin" class="col-sm-2 col-form-label">LinkedIn</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="lastname" />
+          <input
+            type="text"
+            class="form-control"
+            id="linkedin"
+            [value]="userService.user.linkedin"
+          />
           <div class="form-text">e.g. https://www.linkedin.com/in/yourname</div>
         </div>
       </div>
